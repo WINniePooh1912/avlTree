@@ -1,34 +1,34 @@
 public class Main {
 	public static void main(String[] args) {
-		Tree tree = new Tree(4);
+		Tree tree = new Tree();
 
-		tree.push(3);
-		tree.push(89);
-		tree.push(5);
-		tree.push(1);
-		tree.push(8);
-		tree.push(7);
-		tree.push(12);
-		tree.push(51);
-		tree.push(2);
-		tree.push(9);
+		tree.add(3);
+		tree.add(89);
+		tree.add(5);
+		tree.add(1);
+		tree.add(8);
+		tree.add(7);
+		tree.add(12);
+		tree.add(51);
+		tree.add(2);
+		tree.add(9);
 
 		System.out.println("Preorder:");
 		System.out.print("Left: ");
-		tree.preorderLeft(tree);
+		tree.preorderLeft(tree.getRoot());
 		System.out.print("\nRight: ");
-		tree.preorderRight(tree);
+		tree.preorderRight(tree.getRoot());
 
 		System.out.println("\nPostorder:");
 		System.out.print("Left: ");
-		tree.postorderLeft(tree);
+		tree.postorderLeft(tree.getRoot());
 		System.out.print("\nRight: ");
-		tree.postorderRight(tree);
+		tree.postorderRight(tree.getRoot());
 
 		System.out.println("\nInorder:");
 		System.out.print("Left: ");
-		tree.inorderLeft(tree);
+		tree.inorderLeft(tree.getRoot());
 		System.out.print("\nRight: ");
-		tree.inorderRight(tree);
+		tree.inorderRight(tree.getRoot());
 	}
 }
